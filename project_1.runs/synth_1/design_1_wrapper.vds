@@ -1,0 +1,529 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:12:34 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu Nov 13 20:26:11 2014
+# Process ID: 15036
+# Log file: /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/design_1_wrapper.vds
+# Journal file: /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl
+# set_param gui.test TreeTableDev
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7z045ffg900-2
+# set_property target_language Verilog [current_project]
+# set_property board_part xilinx.com:zc706:part0:1.0 [current_project]
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_property default_lib xil_defaultlib [current_project]
+# add_files -quiet /scratch/skarandikar/test_ps_sfp/project_1.runs/gig_ethernet_pcs_pma_0_synth_1/gig_ethernet_pcs_pma_0.dcp
+# set_property used_in_implementation false [get_files /scratch/skarandikar/test_ps_sfp/project_1.runs/gig_ethernet_pcs_pma_0_synth_1/gig_ethernet_pcs_pma_0.dcp]
+# add_files -quiet /scratch/skarandikar/test_ps_sfp/project_1.runs/ila_0_synth_1/ila_0.dcp
+# set_property used_in_implementation false [get_files /scratch/skarandikar/test_ps_sfp/project_1.runs/ila_0_synth_1/ila_0.dcp]
+# add_files /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1.bd
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ecad/tools/xilinx/Vivado/2014.2/data/ip'.
+# set_property used_in_implementation false [get_files -all /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
+# set_property used_in_implementation false [get_files -all /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property is_locked true [get_files /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+# read_verilog -library xil_defaultlib /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v]
+# read_xdc /scratch/skarandikar/test_ps_sfp/project_1.srcs/constrs_1/new/base.xdc
+# set_property used_in_implementation false [get_files /scratch/skarandikar/test_ps_sfp/project_1.srcs/constrs_1/new/base.xdc]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# read_xdc dont_buffer.xdc
+# set_property used_in_implementation false [get_files dont_buffer.xdc]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir /scratch/skarandikar/test_ps_sfp/project_1.cache/wt [current_project]
+# set_property parent.project_dir /scratch/skarandikar/test_ps_sfp [current_project]
+# catch { write_hwdef -file design_1_wrapper.hwdef }
+# synth_design -top design_1_wrapper -part xc7z045ffg900-2
+Command: synth_design -top design_1_wrapper -part xc7z045ffg900-2
+
+Starting synthesis...
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+WARNING: [Synth 8-976] FCLK_CLK0 has already been declared [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:146]
+WARNING: [Synth 8-2654] second declaration of FCLK_CLK0 ignored [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:146]
+INFO: [Synth 8-994] FCLK_CLK0 is declared here [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:96]
+WARNING: [Synth 8-976] FCLK_RESET0_N has already been declared [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:147]
+WARNING: [Synth 8-2654] second declaration of FCLK_RESET0_N ignored [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:147]
+INFO: [Synth 8-994] FCLK_RESET0_N is declared here [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:97]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 812.344 ; gain = 179.719
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:10265]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS' (1#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:10265]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:606]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (2#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:606]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'GND' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:3852]
+INFO: [Synth 8-256] done synthesizing module 'GND' (3#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:3852]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_4_processing_system7' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:153]
+	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
+	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
+	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
+	Parameter C_M_AXI_GP0_THREAD_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXI_GP1_THREAD_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXI_GP0_ENABLE_STATIC_REMAP bound to: 0 - type: integer 
+	Parameter C_M_AXI_GP1_ENABLE_STATIC_REMAP bound to: 0 - type: integer 
+	Parameter C_M_AXI_GP0_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXI_GP1_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_S_AXI_GP0_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_GP1_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP0_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP1_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP2_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP3_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_ACP_ID_WIDTH bound to: 3 - type: integer 
+	Parameter C_S_AXI_HP0_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_HP1_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_HP2_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_HP3_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_INCLUDE_ACP_TRANS_CHECK bound to: 0 - type: integer 
+	Parameter C_NUM_F2P_INTR_INPUTS bound to: 1 - type: integer 
+	Parameter C_FCLK_CLK0_BUF bound to: true - type: string 
+	Parameter C_FCLK_CLK1_BUF bound to: false - type: string 
+	Parameter C_FCLK_CLK2_BUF bound to: false - type: string 
+	Parameter C_FCLK_CLK3_BUF bound to: false - type: string 
+	Parameter C_EMIO_GPIO_WIDTH bound to: 64 - type: integer 
+	Parameter C_INCLUDE_TRACE_BUFFER bound to: 0 - type: integer 
+	Parameter C_TRACE_BUFFER_FIFO_SIZE bound to: 128 - type: integer 
+	Parameter C_TRACE_BUFFER_CLOCK_DELAY bound to: 12 - type: integer 
+	Parameter USE_TRACE_DATA_EDGE_DETECTOR bound to: 0 - type: integer 
+	Parameter C_TRACE_PIPELINE_WIDTH bound to: 8 - type: integer 
+	Parameter C_PS7_SI_REV bound to: PRODUCTION - type: string 
+	Parameter C_EN_EMIO_ENET0 bound to: 0 - type: integer 
+	Parameter C_EN_EMIO_ENET1 bound to: 1 - type: integer 
+	Parameter C_EN_EMIO_TRACE bound to: 0 - type: integer 
+	Parameter C_DQ_WIDTH bound to: 32 - type: integer 
+	Parameter C_DQS_WIDTH bound to: 4 - type: integer 
+	Parameter C_DM_WIDTH bound to: 4 - type: integer 
+	Parameter C_MIO_PRIMITIVE bound to: 54 - type: integer 
+	Parameter C_PACKAGE_NAME bound to: ffg900 - type: string 
+	Parameter C_IRQ_F2P_MODE bound to: DIRECT - type: string 
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2217]
+INFO: [Synth 8-638] synthesizing module 'BIBUF' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:268]
+INFO: [Synth 8-256] done synthesizing module 'BIBUF' (4#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:268]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2218]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2219]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2220]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2221]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2222]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2223]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2224]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2225]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2226]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2227]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2228]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2229]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2230]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2235]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2241]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2241]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2241]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2247]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2253]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2253]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2253]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2253]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:2259]
+INFO: [Common 17-14] Message 'Synth 8-4446' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-638] synthesizing module 'PS7' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:26452]
+INFO: [Synth 8-256] done synthesizing module 'PS7' (5#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:26452]
+WARNING: [Synth 8-3848] Net ENET0_GMII_TX_EN in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:212]
+WARNING: [Synth 8-3848] Net ENET0_GMII_TX_ER in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:213]
+WARNING: [Synth 8-3848] Net ENET0_GMII_TXD in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:229]
+WARNING: [Synth 8-3848] Net TRACE_CTL_PIPE[0] in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1300]
+WARNING: [Synth 8-3848] Net TRACE_DATA_PIPE[0] in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1301]
+WARNING: [Synth 8-3848] Net TRACE_CLK_OUT in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:405]
+WARNING: [Synth 8-3848] Net ENET0_GMII_COL_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1048]
+WARNING: [Synth 8-3848] Net ENET0_GMII_CRS_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1049]
+WARNING: [Synth 8-3848] Net ENET0_GMII_RXD_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1052]
+WARNING: [Synth 8-3848] Net ENET0_GMII_RX_DV_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1050]
+WARNING: [Synth 8-3848] Net ENET0_GMII_RX_ER_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1051]
+WARNING: [Synth 8-3848] Net FTMD_TRACEIN_ATID_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1070]
+WARNING: [Synth 8-3848] Net FTMD_TRACEIN_DATA_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1068]
+WARNING: [Synth 8-3848] Net FTMD_TRACEIN_VALID_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1069]
+INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_4_processing_system7' (6#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:153]
+WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_4_processing_system7' requires 686 connections, but only 673 given [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:259]
+INFO: [Synth 8-256] done synthesizing module 'design_1_processing_system7_0_0' (7#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:57]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' requires 52 connections, but only 49 given [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/hdl/design_1.v:190]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (8#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0' [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/.Xil/Vivado-15036-a8/realtime/gig_ethernet_pcs_pma_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0' (9#1) [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/.Xil/Vivado-15036-a8/realtime/gig_ethernet_pcs_pma_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/.Xil/Vivado-15036-a8/realtime/ila_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'ila_0' (10#1) [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/.Xil/Vivado-15036-a8/realtime/ila_0_stub.v:7]
+WARNING: [Synth 8-3848] Net ENET1_EXT_INTIN in module/entity design_1_wrapper does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:95]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (11#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3917] design design_1_wrapper has port sfp_tx_disable driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 836.352 ; gain = 203.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:ENET1_EXT_INTIN to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:184]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/zynq/xc7z045/ClockRegion.xml
+Loading clock buffers from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/zynq/xc7z045/ClockBuffers.xml
+Loading clock placement rules from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/PinFunctions.xml...
+Loading package from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/zynq/xc7z045/ffg900/Package.xml
+Loading io standards from /ecad/tools/xilinx/Vivado/2014.2/data/./parts/xilinx/zynq/IOStandards.xml
+
+Processing XDC Constraints
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/.Xil/Vivado-15036-a8/dcp/gig_ethernet_pcs_pma_0_in_context.xdc] for cell 'core_wrapper'
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/.Xil/Vivado-15036-a8/dcp/gig_ethernet_pcs_pma_0_in_context.xdc] for cell 'core_wrapper'
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this message, exclude constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/constrs_1/new/base.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/constrs_1/new/base.xdc]
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this message, exclude constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1160.602 ; gain = 527.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_touch.xdc, line 7).
+Applied set_property DONT_TOUCH = true for processing_system7_0. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_touch.xdc, line 10).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_touch.xdc, line 13).
+Applied set_property BUFFER_TYPE = NONE for sfp_txp. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for sfp_txn. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for sfp_rxp. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for sfp_rxn. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for sfp_125_clk_p. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for sfp_125_clk_n. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc, line 4).
+Applied set_property BUFFER_TYPE = NONE for sfp_tx_disable. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc, line 5).
+Applied set_property BUFFER_TYPE = NONE for sfp_link_status. (constraint file  /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/dont_buffer.xdc, line 5).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1160.602 ; gain = 527.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1160.602 ; gain = 527.977
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3848] Net ENET0_GMII_TX_EN in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:212]
+WARNING: [Synth 8-3848] Net ENET0_GMII_TX_ER in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:213]
+WARNING: [Synth 8-3848] Net ENET0_GMII_TXD in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:229]
+WARNING: [Synth 8-3848] Net TRACE_CTL_PIPE[0] in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1300]
+WARNING: [Synth 8-3848] Net TRACE_DATA_PIPE[0] in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1301]
+WARNING: [Synth 8-3848] Net TRACE_CLK_OUT in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:405]
+WARNING: [Synth 8-3848] Net ENET0_GMII_COL_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1048]
+WARNING: [Synth 8-3848] Net ENET0_GMII_CRS_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1049]
+WARNING: [Synth 8-3848] Net ENET0_GMII_RXD_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1052]
+WARNING: [Synth 8-3848] Net ENET0_GMII_RX_DV_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1050]
+WARNING: [Synth 8-3848] Net ENET0_GMII_RX_ER_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1051]
+WARNING: [Synth 8-3848] Net FTMD_TRACEIN_ATID_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1070]
+WARNING: [Synth 8-3848] Net FTMD_TRACEIN_DATA_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1068]
+WARNING: [Synth 8-3848] Net FTMD_TRACEIN_VALID_i in module/entity processing_system7_v5_4_processing_system7 does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_4_processing_system7.v:1069]
+WARNING: [Synth 8-3848] Net ENET1_EXT_INTIN in module/entity design_1_wrapper does not have driver. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v:95]
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module design_1_wrapper 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
+Module processing_system7_v5_4_processing_system7 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
+Module design_1_processing_system7_0_0 
+Detailed RTL Component Info : 
+Module design_1 
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1160.602 ; gain = 527.977
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design design_1_wrapper has port sfp_tx_disable driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1160.602 ; gain = 527.977
+---------------------------------------------------------------------------------
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1160.602 ; gain = 527.977
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1160.602 ; gain = 527.977
+---------------------------------------------------------------------------------
+Finished Parallel Area Opt  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1160.602 ; gain = 527.977
+Finished Parallel Section  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1160.602 ; gain = 527.977
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: Moved 5 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1357.609 ; gain = 724.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1375.617 ; gain = 742.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1383.625 ; gain = 751.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:ENET1_EXT_INTIN to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1383.625 ; gain = 751.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1383.625 ; gain = 751.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1383.625 ; gain = 751.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------+----------+
+|      |BlackBox name          |Instances |
++------+-----------------------+----------+
+|1     |gig_ethernet_pcs_pma_0 |         1|
+|2     |ila_0                  |         1|
++------+-----------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------+------+
+|      |Cell                   |Count |
++------+-----------------------+------+
+|1     |gig_ethernet_pcs_pma_0 |     1|
+|2     |ila_0                  |     1|
+|3     |BIBUF                  |   130|
+|4     |BUFG                   |     2|
+|5     |CARRY4                 |     6|
+|6     |GND                    |     1|
+|7     |LUT1                   |   114|
+|8     |PS7                    |     1|
+|9     |FDRE                   |    82|
+|10    |IBUFDS                 |     1|
+|11    |OBUF                   |     1|
++------+-----------------------+------+
+
+Report Instance Areas: 
++------+-------------------------+-------------------------------------------+------+
+|      |Instance                 |Module                                     |Cells |
++------+-------------------------+-------------------------------------------+------+
+|1     |top                      |                                           |   380|
+|2     |  design_1_i             |design_1                                   |   244|
+|3     |    processing_system7_0 |design_1_processing_system7_0_0            |   243|
+|4     |      inst               |processing_system7_v5_4_processing_system7 |   243|
++------+-------------------------+-------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1383.625 ; gain = 751.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1383.625 ; gain = 751.000
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 140 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1391.625 ; gain = 630.152
+# write_checkpoint design_1_wrapper.dcp
+# report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1391.629 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 13 20:26:45 2014...

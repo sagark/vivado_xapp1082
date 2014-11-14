@@ -1,0 +1,20 @@
+16:18:02 INFO  : Processing command line option -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf.
+16:19:07 INFO  : Processing command line option -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf.
+16:19:08 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+20:39:41 INFO  : Processing command line option -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf.
+20:39:42 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+20:39:51 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1415939419000,  Project:1415924031000
+20:39:51 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf.
+20:39:51 INFO  : Copied contents of /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+20:40:02 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:40:13 INFO  : 
+20:40:15 INFO  : Updating hardware inferred compiler options for FSBL.
+20:40:15 INFO  : Clearing existing target manager status.
+20:40:16 INFO  : Copied contents of /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.html into /FSBL/src/ps7_init.html.
+20:40:16 INFO  : Copied contents of /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl into /FSBL/src/ps7_init.tcl.
+20:40:16 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+20:41:08 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:11:51 INFO  : Processing command line option -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf.
+22:11:51 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+22:37:13 INFO  : Processing command line option -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf.
+22:37:13 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.

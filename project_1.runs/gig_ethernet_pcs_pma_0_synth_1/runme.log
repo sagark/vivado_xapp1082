@@ -1,0 +1,1333 @@
+
+*** Running vivado
+    with args -log gig_ethernet_pcs_pma_0.vds -m64 -mode batch -messageDb vivado.pb -source gig_ethernet_pcs_pma_0.tcl
+
+
+****** Vivado v2014.2 (64-bit)
+  **** SW Build 932637 on Wed Jun 11 13:12:34 MDT 2014
+  **** IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source gig_ethernet_pcs_pma_0.tcl
+# set_param gui.test TreeTableDev
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7z045ffg900-2
+# set_property target_language Verilog [current_project]
+# set_property board_part xilinx.com:zc706:part0:1.0 [current_project]
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_property default_lib xil_defaultlib [current_project]
+# read_ip /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ecad/tools/xilinx/Vivado/2014.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'gig_ethernet_pcs_pma_0' generated file not found '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'gig_ethernet_pcs_pma_0' generated file not found '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'gig_ethernet_pcs_pma_0' generated file not found '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'gig_ethernet_pcs_pma_0' generated file not found '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_funcsim.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'gig_ethernet_pcs_pma_0' generated file not found '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_funcsim.vhdl'. Please regenerate to continue.
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property is_locked true [get_files /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir /scratch/skarandikar/test_ps_sfp/project_1.cache/wt [current_project]
+# set_property parent.project_dir /scratch/skarandikar/test_ps_sfp [current_project]
+# catch { write_hwdef -file gig_ethernet_pcs_pma_0.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top gig_ethernet_pcs_pma_0 -part xc7z045ffg900-2 -mode out_of_context
+Command: synth_design -top gig_ethernet_pcs_pma_0 -part xc7z045ffg900-2 -mode out_of_context
+
+Starting synthesis...
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 796.746 ; gain = 164.125
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.v:89]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_support' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_support.v:64]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_block' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:89]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_v14_2' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gig_ethernet_pcs_pma_v14_2.vhd:216]
+	Parameter C_ELABORATION_TRANSIENT_DIR bound to: BlankString - type: string 
+	Parameter C_COMPONENT_NAME bound to: gig_ethernet_pcs_pma_0 - type: string 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_IS_SGMII bound to: 0 - type: bool 
+	Parameter C_USE_TRANSCEIVER bound to: 1 - type: bool 
+	Parameter C_HAS_TEMAC bound to: 1 - type: bool 
+	Parameter C_USE_TBI bound to: 0 - type: bool 
+	Parameter C_USE_LVDS bound to: 0 - type: bool 
+	Parameter C_HAS_AN bound to: 1 - type: bool 
+	Parameter C_HAS_MDIO bound to: 1 - type: bool 
+	Parameter C_SGMII_PHY_MODE bound to: 0 - type: bool 
+	Parameter C_DYNAMIC_SWITCHING bound to: 0 - type: bool 
+	Parameter C_TRANSCEIVER_MODE bound to: A - type: string 
+	Parameter C_SGMII_FABRIC_BUFFER bound to: 1 - type: bool 
+	Parameter C_1588 bound to: 0 - type: integer 
+	Parameter B_SHIFTER_ADDR bound to: 8'b01001110 
+	Parameter RX_GT_NOMINAL_LATENCY bound to: 16'b0000000011001000 
+	Parameter GT_RX_BYTE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'GPCS_PMA_GEN' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:287]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_IS_SGMII bound to: 0 - type: bool 
+	Parameter C_USE_TRANSCEIVER bound to: 1 - type: bool 
+	Parameter C_HAS_TEMAC bound to: 1 - type: bool 
+	Parameter C_USE_TBI bound to: 0 - type: bool 
+	Parameter C_USE_LVDS bound to: 0 - type: bool 
+	Parameter C_HAS_AN bound to: 1 - type: bool 
+	Parameter C_HAS_MDIO bound to: 1 - type: bool 
+	Parameter C_SGMII_PHY_MODE bound to: 0 - type: bool 
+	Parameter C_DYNAMIC_SWITCHING bound to: 0 - type: bool 
+	Parameter C_QSGMII bound to: 0 - type: bool 
+	Parameter C_1588 bound to: 0 - type: integer 
+	Parameter RX_GT_NOMINAL_LATENCY bound to: 16'b0000000011001000 
+	Parameter B_SHIFTER_ADDR bound to: 8'b01001110 
+	Parameter GT_RX_BYTE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = true [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:297]
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = true [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:298]
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = true [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:299]
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = true [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:300]
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = true [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:398]
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = true [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:399]
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = true [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:400]
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = true [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:401]
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = true [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:402]
+	Parameter INIT bound to: 16'b0000000000000000 
+INFO: [Synth 8-113] binding component instance 'DELAY_RXDISPERR' to cell 'SRL16' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:593]
+	Parameter INIT bound to: 16'b0000000000000000 
+INFO: [Synth 8-113] binding component instance 'DELAY_RXNOTINTABLE' to cell 'SRL16' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:608]
+	Parameter C_IS_SGMII bound to: 0 - type: bool 
+	Parameter C_USE_TRANSCEIVER bound to: 1 - type: bool 
+	Parameter C_HAS_TEMAC bound to: 1 - type: bool 
+	Parameter C_DYNAMIC_SWITCHING bound to: 0 - type: bool 
+	Parameter C_HAS_AN bound to: 1 - type: bool 
+	Parameter C_SGMII_PHY_MODE bound to: 0 - type: bool 
+	Parameter C_1588 bound to: 0 - type: integer 
+	Parameter RX_GT_NOMINAL_LATENCY bound to: 16'b0000000011001000 
+	Parameter C_QSGMII bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'MANAGEMENT' declared at '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/management/management.vhd:124' bound to instance 'MDIO' of component 'MANAGEMENT' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:638]
+INFO: [Synth 8-638] synthesizing module 'MANAGEMENT__parameterized0' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/management/management.vhd:229]
+	Parameter C_IS_SGMII bound to: 0 - type: bool 
+	Parameter C_USE_TRANSCEIVER bound to: 1 - type: bool 
+	Parameter C_HAS_TEMAC bound to: 1 - type: bool 
+	Parameter C_DYNAMIC_SWITCHING bound to: 0 - type: bool 
+	Parameter C_HAS_AN bound to: 1 - type: bool 
+	Parameter C_SGMII_PHY_MODE bound to: 0 - type: bool 
+	Parameter C_1588 bound to: 0 - type: integer 
+	Parameter RX_GT_NOMINAL_LATENCY bound to: 16'b0000000011001000 
+	Parameter C_QSGMII bound to: 0 - type: bool 
+	Parameter INITIALISE bound to: 2'b00 
+INFO: [Synth 8-3491] module 'sync_block' declared at '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:123' bound to instance 'SYNC_MDC' of component 'sync_block' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/management/management.vhd:437]
+INFO: [Synth 8-638] synthesizing module 'sync_block__parameterized0' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:139]
+	Parameter INITIALISE bound to: 2'b00 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'data_sync_reg1' to cell 'FD' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:172]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'data_sync_reg2' to cell 'FD' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:182]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'data_sync_reg3' to cell 'FD' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:192]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'data_sync_reg4' to cell 'FD' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:202]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'data_sync_reg5' to cell 'FD' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:212]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'data_sync_reg6' to cell 'FD' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:222]
+INFO: [Synth 8-256] done synthesizing module 'sync_block__parameterized0' (1#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:139]
+	Parameter INITIALISE bound to: 2'b00 
+INFO: [Synth 8-3491] module 'sync_block' declared at '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:123' bound to instance 'SYNC_MDIO_IN' of component 'sync_block' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/management/management.vhd:446]
+INFO: [Synth 8-3491] module 'MDIO_INTERFACE' declared at '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/management/mdio_interface.vhd:119' bound to instance 'MDIO_INTERFACE_1' of component 'MDIO_INTERFACE' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/management/management.vhd:480]
+INFO: [Synth 8-638] synthesizing module 'MDIO_INTERFACE' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/management/mdio_interface.vhd:148]
+INFO: [Synth 8-256] done synthesizing module 'MDIO_INTERFACE' (2#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/management/mdio_interface.vhd:148]
+INFO: [Synth 8-256] done synthesizing module 'MANAGEMENT__parameterized0' (3#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/management/management.vhd:229]
+	Parameter C_DYNAMIC_SWITCHING bound to: 0 - type: bool 
+	Parameter C_IS_SGMII bound to: 0 - type: bool 
+	Parameter C_SGMII_PHY_MODE bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'AUTO_NEG' declared at '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/auto_neg/auto_neg.vhd:154' bound to instance 'AUTO_NEGOTIATION' of component 'AUTO_NEG' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:820]
+INFO: [Synth 8-638] synthesizing module 'AUTO_NEG__parameterized0' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/auto_neg/auto_neg.vhd:246]
+	Parameter C_DYNAMIC_SWITCHING bound to: 0 - type: bool 
+	Parameter C_IS_SGMII bound to: 0 - type: bool 
+	Parameter C_SGMII_PHY_MODE bound to: 0 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'AUTO_NEG__parameterized0' (4#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/auto_neg/auto_neg.vhd:246]
+	Parameter C_QSGMII bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'TX' declared at '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/tx/tx.vhd:128' bound to instance 'TRANSMITTER' of component 'TX' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:905]
+INFO: [Synth 8-638] synthesizing module 'TX__parameterized0' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/tx/tx.vhd:169]
+	Parameter C_QSGMII bound to: 0 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'TX__parameterized0' (5#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/tx/tx.vhd:169]
+	Parameter INITIALISE bound to: 2'b00 
+INFO: [Synth 8-3491] module 'sync_block' declared at '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd:123' bound to instance 'SYNC_SIGNAL_DETECT' of component 'sync_block' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:933]
+INFO: [Synth 8-3491] module 'SYNCHRONISE' declared at '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/synchronise/synchronise.vhd:125' bound to instance 'SYNCHRONISATION' of component 'SYNCHRONISE' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:942]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRONISE' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/synchronise/synchronise.vhd:158]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRONISE' (6#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/synchronise/synchronise.vhd:158]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_USE_TRANSCEIVER bound to: 1 - type: bool 
+	Parameter C_USE_TBI bound to: 0 - type: bool 
+	Parameter C_USE_LVDS bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'RX' declared at '/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/rx/rx.vhd:127' bound to instance 'RECEIVER' of component 'RX' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:966]
+INFO: [Synth 8-638] synthesizing module 'RX__parameterized0' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/rx/rx.vhd:197]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_USE_TRANSCEIVER bound to: 1 - type: bool 
+	Parameter C_USE_TBI bound to: 0 - type: bool 
+	Parameter C_USE_LVDS bound to: 0 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'RX__parameterized0' (7#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/rx/rx.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'GPCS_PMA_GEN' (8#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd:287]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_v14_2' (9#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_v14_2/hdl/gig_ethernet_pcs_pma_v14_2.vhd:216]
+WARNING: [Synth 8-350] instance 'gig_ethernet_pcs_pma_0_core' of module 'gig_ethernet_pcs_pma_v14_2' requires 73 connections, but only 43 given [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_transceiver' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_transceiver.v:63]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+INFO: [Synth 8-4472] Detected and applied attribute KEEP = TRUE [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_transceiver.v:160]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_reset_sync' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:63]
+	Parameter INITIALISE bound to: 2'b11 
+INFO: [Synth 8-4472] Detected and applied attribute shreg_extract = no [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:74]
+INFO: [Synth 8-4472] Detected and applied attribute ASYNC_REG = TRUE [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:74]
+INFO: [Synth 8-4472] Detected and applied attribute shreg_extract = no [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:77]
+INFO: [Synth 8-4472] Detected and applied attribute ASYNC_REG = TRUE [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:77]
+INFO: [Synth 8-4472] Detected and applied attribute shreg_extract = no [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:80]
+INFO: [Synth 8-4472] Detected and applied attribute ASYNC_REG = TRUE [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:80]
+INFO: [Synth 8-4472] Detected and applied attribute shreg_extract = no [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:83]
+INFO: [Synth 8-4472] Detected and applied attribute ASYNC_REG = TRUE [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:83]
+INFO: [Synth 8-4472] Detected and applied attribute shreg_extract = no [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:86]
+INFO: [Synth 8-4472] Detected and applied attribute ASYNC_REG = TRUE [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:86]
+INFO: [Synth 8-4472] Detected and applied attribute shreg_extract = no [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:89]
+INFO: [Synth 8-4472] Detected and applied attribute ASYNC_REG = TRUE [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:89]
+INFO: [Synth 8-638] synthesizing module 'FDP' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:2941]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-256] done synthesizing module 'FDP' (10#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:2941]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_reset_sync' (11#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_reset_sync.v:63]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_GTWIZARD' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard.v:72]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_GTWIZARD_init' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard_init.v:71]
+	Parameter EXAMPLE_SIM_GTRESET_SPEEDUP bound to: TRUE - type: string 
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+	Parameter STABLE_CLOCK_PERIOD bound to: 5 - type: integer 
+	Parameter EXAMPLE_USE_CHIPSCOPE bound to: 0 - type: integer 
+	Parameter RX_CDRLOCK_TIME bound to: 40000.000000 - type: float 
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_GTWIZARD_multi_gt' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard_multi_gt.v:72]
+	Parameter WRAPPER_SIM_GTRESET_SPEEDUP bound to: TRUE - type: string 
+	Parameter RX_DFE_KL_CFG2_IN bound to: 806439084 - type: integer 
+	Parameter PMA_RSV_IN bound to: 99456 - type: integer 
+	Parameter QPLL_FBDIV_TOP bound to: 16 - type: integer 
+	Parameter QPLL_FBDIV_IN bound to: 10'b0000100000 
+	Parameter QPLL_FBDIV_RATIO bound to: 1'b1 
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_GTWIZARD_GT' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard_gt.v:71]
+	Parameter GT_SIM_GTRESET_SPEEDUP bound to: TRUE - type: string 
+	Parameter RX_DFE_KL_CFG2_IN bound to: 806439084 - type: integer 
+	Parameter PMA_RSV_IN bound to: 99456 - type: integer 
+	Parameter PCS_RSVD_ATTR_IN bound to: 48'b000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-638] synthesizing module 'GTXE2_CHANNEL' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:8096]
+	Parameter ALIGN_COMMA_DOUBLE bound to: FALSE - type: string 
+	Parameter ALIGN_MCOMMA_DET bound to: TRUE - type: string 
+	Parameter ALIGN_PCOMMA_DET bound to: TRUE - type: string 
+	Parameter CBCC_DATA_SOURCE_SEL bound to: DECODED - type: string 
+	Parameter CHAN_BOND_KEEP_ALIGN bound to: FALSE - type: string 
+	Parameter CHAN_BOND_SEQ_2_USE bound to: FALSE - type: string 
+	Parameter CLK_CORRECT_USE bound to: TRUE - type: string 
+	Parameter CLK_COR_KEEP_IDLE bound to: FALSE - type: string 
+	Parameter CLK_COR_PRECEDENCE bound to: TRUE - type: string 
+	Parameter CLK_COR_SEQ_2_USE bound to: TRUE - type: string 
+	Parameter DEC_MCOMMA_DETECT bound to: TRUE - type: string 
+	Parameter DEC_PCOMMA_DETECT bound to: TRUE - type: string 
+	Parameter DEC_VALID_COMMA_ONLY bound to: FALSE - type: string 
+	Parameter ES_ERRDET_EN bound to: FALSE - type: string 
+	Parameter ES_EYE_SCAN_EN bound to: TRUE - type: string 
+	Parameter FTS_LANE_DESKEW_EN bound to: FALSE - type: string 
+	Parameter PCS_PCIE_EN bound to: FALSE - type: string 
+	Parameter RXBUF_ADDR_MODE bound to: FULL - type: string 
+	Parameter RXBUF_EN bound to: TRUE - type: string 
+	Parameter RXBUF_RESET_ON_CB_CHANGE bound to: TRUE - type: string 
+	Parameter RXBUF_RESET_ON_COMMAALIGN bound to: FALSE - type: string 
+	Parameter RXBUF_RESET_ON_EIDLE bound to: FALSE - type: string 
+	Parameter RXBUF_RESET_ON_RATE_CHANGE bound to: TRUE - type: string 
+	Parameter RXBUF_THRESH_OVRD bound to: FALSE - type: string 
+	Parameter RXGEARBOX_EN bound to: FALSE - type: string 
+	Parameter RXSLIDE_MODE bound to: OFF - type: string 
+	Parameter RX_DEFER_RESET_BUF_EN bound to: TRUE - type: string 
+	Parameter RX_DISPERR_SEQ_MATCH bound to: TRUE - type: string 
+	Parameter RX_XCLK_SEL bound to: RXREC - type: string 
+	Parameter SATA_CPLL_CFG bound to: VCO_3000MHZ - type: string 
+	Parameter SHOW_REALIGN_COMMA bound to: TRUE - type: string 
+	Parameter SIM_RECEIVER_DETECT_PASS bound to: TRUE - type: string 
+	Parameter SIM_RESET_SPEEDUP bound to: TRUE - type: string 
+	Parameter SIM_TX_EIDLE_DRIVE_LEVEL bound to: X - type: string 
+	Parameter SIM_VERSION bound to: 4.0 - type: string 
+	Parameter TXBUF_EN bound to: TRUE - type: string 
+	Parameter TXBUF_RESET_ON_RATE_CHANGE bound to: TRUE - type: string 
+	Parameter TXGEARBOX_EN bound to: FALSE - type: string 
+	Parameter TX_DRIVE_MODE bound to: DIRECT - type: string 
+	Parameter TX_LOOPBACK_DRIVE_HIZ bound to: FALSE - type: string 
+	Parameter TX_XCLK_SEL bound to: TXOUT - type: string 
+	Parameter IS_CPLLLOCKDETCLK_INVERTED bound to: 1'b0 
+	Parameter IS_DRPCLK_INVERTED bound to: 1'b0 
+	Parameter IS_GTGREFCLK_INVERTED bound to: 1'b0 
+	Parameter IS_RXUSRCLK2_INVERTED bound to: 1'b0 
+	Parameter IS_RXUSRCLK_INVERTED bound to: 1'b0 
+	Parameter IS_TXPHDLYTSTCLK_INVERTED bound to: 1'b0 
+	Parameter IS_TXUSRCLK2_INVERTED bound to: 1'b0 
+	Parameter IS_TXUSRCLK_INVERTED bound to: 1'b0 
+	Parameter RXCDR_FR_RESET_ON_EIDLE bound to: 1'b0 
+	Parameter RXCDR_HOLD_DURING_EIDLE bound to: 1'b0 
+	Parameter RXCDR_PH_RESET_ON_EIDLE bound to: 1'b0 
+	Parameter RXPRBS_ERR_LOOPBACK bound to: 1'b1 
+	Parameter RX_CLKMUX_PD bound to: 1'b1 
+	Parameter RX_DFE_LPM_HOLD_DURING_EIDLE bound to: 1'b0 
+	Parameter TERM_RCAL_OVRD bound to: 1'b0 
+	Parameter TX_CLKMUX_PD bound to: 1'b1 
+	Parameter TX_MAINCURSOR_SEL bound to: 1'b0 
+	Parameter TX_PREDRIVER_MODE bound to: 1'b0 
+	Parameter TX_QPI_STATUS_EN bound to: 1'b0 
+	Parameter UCODEER_CLR bound to: 1'b0 
+	Parameter RX_DFE_H4_CFG bound to: 11'b00011110000 
+	Parameter RX_DFE_H5_CFG bound to: 11'b00011100000 
+	Parameter ES_HORZ_OFFSET bound to: 12'b000000000000 
+	Parameter PD_TRANS_TIME_FROM_P2 bound to: 12'b000000111100 
+	Parameter RX_BIAS_CFG bound to: 12'b000000000100 
+	Parameter RX_DEBUG_CFG bound to: 12'b000000000000 
+	Parameter RX_DFE_H2_CFG bound to: 12'b000000000000 
+	Parameter RX_DFE_H3_CFG bound to: 12'b000001000000 
+	Parameter RX_DFE_KL_CFG bound to: 13'b0000011111110 
+	Parameter RX_DFE_XYD_CFG bound to: 13'b0000000000000 
+	Parameter RX_OS_CFG bound to: 13'b0000010000000 
+	Parameter RXLPM_HF_CFG bound to: 14'b00000011110000 
+	Parameter RXLPM_LF_CFG bound to: 14'b00000011110000 
+	Parameter TX_RXDETECT_CFG bound to: 14'b01100000110010 
+	Parameter CPLL_LOCK_CFG bound to: 16'b0000000111101000 
+	Parameter PMA_RSV2 bound to: 16'b0010000001010000 
+	Parameter RXDLY_CFG bound to: 16'b0000000000011111 
+	Parameter RXDLY_TAP_CFG bound to: 16'b0000000000000000 
+	Parameter RX_DFE_LPM_CFG bound to: 16'b0000100101010100 
+	Parameter TXDLY_CFG bound to: 16'b0000000000011111 
+	Parameter TXDLY_TAP_CFG bound to: 16'b0000000000000000 
+	Parameter TXPH_CFG bound to: 16'b0000011110000000 
+	Parameter RX_DFE_UT_CFG bound to: 17'b10001111000000000 
+	Parameter RX_DFE_VP_CFG bound to: 17'b00011111100000011 
+	Parameter OUTREFCLK_SEL_INV bound to: 2'b11 
+	Parameter PMA_RSV3 bound to: 2'b00 
+	Parameter RX_CM_SEL bound to: 2'b11 
+	Parameter RX_DFE_GAIN_CFG bound to: 23'b00000100000111111101010 
+	Parameter CPLL_CFG bound to: 24'b101111000000011111011100 
+	Parameter CPLL_INIT_CFG bound to: 24'b000000000000000000011110 
+	Parameter DMONITOR_CFG bound to: 24'b000000000000101000000000 
+	Parameter RXPHDLY_CFG bound to: 24'b000010000100000000100000 
+	Parameter RXPH_CFG bound to: 24'b000000000000000000000000 
+	Parameter TXPHDLY_CFG bound to: 24'b000010000100000000100000 
+	Parameter GEARBOX_MODE bound to: 3'b000 
+	Parameter RX_CM_TRIM bound to: 3'b010 
+	Parameter SATA_BURST_VAL bound to: 3'b100 
+	Parameter SATA_EIDLE_VAL bound to: 3'b100 
+	Parameter SIM_CPLLREFCLK_SEL bound to: 3'b001 
+	Parameter TX_EIDLE_ASSERT_DELAY bound to: 3'b110 
+	Parameter TX_EIDLE_DEASSERT_DELAY bound to: 3'b100 
+	Parameter TX_RXDETECT_REF bound to: 3'b100 
+	Parameter PMA_RSV bound to: 99456 - type: integer 
+	Parameter PMA_RSV4 bound to: 0 - type: integer 
+	Parameter RX_DFE_KL_CFG2 bound to: 806439084 - type: integer 
+	Parameter TST_RSV bound to: 0 - type: integer 
+	Parameter CHAN_BOND_SEQ_1_ENABLE bound to: 4'b1111 
+	Parameter CHAN_BOND_SEQ_2_ENABLE bound to: 4'b1111 
+	Parameter CLK_COR_SEQ_1_ENABLE bound to: 4'b1111 
+	Parameter CLK_COR_SEQ_2_ENABLE bound to: 4'b1111 
+	Parameter FTS_DESKEW_SEQ_ENABLE bound to: 4'b1111 
+	Parameter FTS_LANE_DESKEW_CFG bound to: 4'b1111 
+	Parameter RXBUF_EIDLE_HI_CNT bound to: 4'b1000 
+	Parameter RXBUF_EIDLE_LO_CNT bound to: 4'b0000 
+	Parameter SATA_BURST_SEQ_LEN bound to: 4'b1111 
+	Parameter PCS_RSVD_ATTR bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter ES_PRESCALE bound to: 5'b00000 
+	Parameter RXBUFRESET_TIME bound to: 5'b00001 
+	Parameter RXCDRFREQRESET_TIME bound to: 5'b00001 
+	Parameter RXCDRPHRESET_TIME bound to: 5'b00001 
+	Parameter RXISCANRESET_TIME bound to: 5'b00001 
+	Parameter RXPCSRESET_TIME bound to: 5'b00001 
+	Parameter RXPH_MONITOR_SEL bound to: 5'b00000 
+	Parameter RXPMARESET_TIME bound to: 5'b00011 
+	Parameter TERM_RCAL_CFG bound to: 5'b10000 
+	Parameter TXPCSRESET_TIME bound to: 5'b00001 
+	Parameter TXPH_MONITOR_SEL bound to: 5'b00000 
+	Parameter TXPMARESET_TIME bound to: 5'b00001 
+	Parameter TX_DEEMPH0 bound to: 5'b00000 
+	Parameter TX_DEEMPH1 bound to: 5'b00000 
+	Parameter ES_CONTROL bound to: 6'b000000 
+	Parameter RXCDR_LOCK_CFG bound to: 6'b010101 
+	Parameter RX_BUFFER_CFG bound to: 6'b000000 
+	Parameter RX_DDI_SEL bound to: 6'b000000 
+	Parameter RXDFELPMRESET_TIME bound to: 7'b0001111 
+	Parameter RXOOB_CFG bound to: 7'b0000110 
+	Parameter TX_MARGIN_FULL_0 bound to: 7'b1001110 
+	Parameter TX_MARGIN_FULL_1 bound to: 7'b1001001 
+	Parameter TX_MARGIN_FULL_2 bound to: 7'b1000101 
+	Parameter TX_MARGIN_FULL_3 bound to: 7'b1000010 
+	Parameter TX_MARGIN_FULL_4 bound to: 7'b1000000 
+	Parameter TX_MARGIN_LOW_0 bound to: 7'b1000110 
+	Parameter TX_MARGIN_LOW_1 bound to: 7'b1000100 
+	Parameter TX_MARGIN_LOW_2 bound to: 7'b1000010 
+	Parameter TX_MARGIN_LOW_3 bound to: 7'b1000000 
+	Parameter TX_MARGIN_LOW_4 bound to: 7'b1000000 
+	Parameter RXCDR_CFG bound to: 72'b000000110000000000000000001000111111111101000000000010000000000000100000 
+	Parameter ES_QUALIFIER bound to: 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ES_QUAL_MASK bound to: 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ES_SDATA_MASK bound to: 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter PD_TRANS_TIME_NONE_P2 bound to: 8'b00011001 
+	Parameter PD_TRANS_TIME_TO_P2 bound to: 8'b01100100 
+	Parameter TRANS_TIME_RATE bound to: 8'b00001110 
+	Parameter ES_VERT_OFFSET bound to: 9'b000000000 
+	Parameter RXDLY_LCFG bound to: 9'b000110000 
+	Parameter TXDLY_LCFG bound to: 9'b000110000 
+	Parameter ALIGN_COMMA_ENABLE bound to: 10'b0001111111 
+	Parameter ALIGN_MCOMMA_VALUE bound to: 10'b1010000011 
+	Parameter ALIGN_PCOMMA_VALUE bound to: 10'b0101111100 
+	Parameter CHAN_BOND_SEQ_1_1 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_1_2 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_1_3 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_1_4 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_2_1 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_2_2 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_2_3 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_2_4 bound to: 10'b0000000000 
+	Parameter CLK_COR_SEQ_1_1 bound to: 10'b0110111100 
+	Parameter CLK_COR_SEQ_1_2 bound to: 10'b0001010000 
+	Parameter CLK_COR_SEQ_1_3 bound to: 10'b0000000000 
+	Parameter CLK_COR_SEQ_1_4 bound to: 10'b0000000000 
+	Parameter CLK_COR_SEQ_2_1 bound to: 10'b0110111100 
+	Parameter CLK_COR_SEQ_2_2 bound to: 10'b0010110101 
+	Parameter CLK_COR_SEQ_2_3 bound to: 10'b0000000000 
+	Parameter CLK_COR_SEQ_2_4 bound to: 10'b0000000000 
+	Parameter ES_PMA_CFG bound to: 10'b0000000000 
+	Parameter ALIGN_COMMA_WORD bound to: 2 - type: integer 
+	Parameter CHAN_BOND_MAX_SKEW bound to: 1 - type: integer 
+	Parameter CHAN_BOND_SEQ_LEN bound to: 1 - type: integer 
+	Parameter CLK_COR_MAX_LAT bound to: 36 - type: integer 
+	Parameter CLK_COR_MIN_LAT bound to: 33 - type: integer 
+	Parameter CLK_COR_REPEAT_WAIT bound to: 0 - type: integer 
+	Parameter CLK_COR_SEQ_LEN bound to: 2 - type: integer 
+	Parameter CPLL_FBDIV bound to: 4 - type: integer 
+	Parameter CPLL_FBDIV_45 bound to: 5 - type: integer 
+	Parameter CPLL_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter RXBUF_THRESH_OVFLW bound to: 61 - type: integer 
+	Parameter RXBUF_THRESH_UNDFLW bound to: 8 - type: integer 
+	Parameter RXOUT_DIV bound to: 4 - type: integer 
+	Parameter RXSLIDE_AUTO_WAIT bound to: 7 - type: integer 
+	Parameter RX_CLK25_DIV bound to: 5 - type: integer 
+	Parameter RX_DATA_WIDTH bound to: 20 - type: integer 
+	Parameter RX_INT_DATAWIDTH bound to: 0 - type: integer 
+	Parameter RX_SIG_VALID_DLY bound to: 10 - type: integer 
+	Parameter SAS_MAX_COM bound to: 64 - type: integer 
+	Parameter SAS_MIN_COM bound to: 36 - type: integer 
+	Parameter SATA_MAX_BURST bound to: 8 - type: integer 
+	Parameter SATA_MAX_INIT bound to: 21 - type: integer 
+	Parameter SATA_MAX_WAKE bound to: 7 - type: integer 
+	Parameter SATA_MIN_BURST bound to: 4 - type: integer 
+	Parameter SATA_MIN_INIT bound to: 12 - type: integer 
+	Parameter SATA_MIN_WAKE bound to: 4 - type: integer 
+	Parameter TXOUT_DIV bound to: 4 - type: integer 
+	Parameter TX_CLK25_DIV bound to: 5 - type: integer 
+	Parameter TX_DATA_WIDTH bound to: 20 - type: integer 
+	Parameter TX_INT_DATAWIDTH bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GTXE2_CHANNEL' (12#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:8096]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_GTWIZARD_GT' (13#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard_gt.v:71]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_GTWIZARD_multi_gt' (14#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard_multi_gt.v:72]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_TX_STARTUP_FSM' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_tx_startup_fsm.v:76]
+	Parameter STABLE_CLOCK_PERIOD bound to: 5 - type: integer 
+	Parameter RETRY_COUNTER_BITWIDTH bound to: 8 - type: integer 
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+	Parameter TX_QPLL_USED bound to: FALSE - type: string 
+	Parameter RX_QPLL_USED bound to: FALSE - type: string 
+	Parameter PHASE_ALIGNMENT_MANUAL bound to: FALSE - type: string 
+	Parameter INIT bound to: 4'b0000 
+	Parameter ASSERT_ALL_RESETS bound to: 4'b0001 
+	Parameter WAIT_FOR_PLL_LOCK bound to: 4'b0010 
+	Parameter RELEASE_PLL_RESET bound to: 4'b0011 
+	Parameter WAIT_FOR_TXOUTCLK bound to: 4'b0100 
+	Parameter RELEASE_MMCM_RESET bound to: 4'b0101 
+	Parameter WAIT_FOR_TXUSRCLK bound to: 4'b0110 
+	Parameter WAIT_RESET_DONE bound to: 4'b0111 
+	Parameter DO_PHASE_ALIGNMENT bound to: 4'b1000 
+	Parameter RESET_FSM_DONE bound to: 4'b1001 
+	Parameter MMCM_LOCK_CNT_MAX bound to: 1024 - type: integer 
+	Parameter STARTUP_DELAY bound to: 500 - type: integer 
+	Parameter WAIT_CYCLES bound to: 100 - type: integer 
+	Parameter WAIT_MAX bound to: 110 - type: integer 
+	Parameter WAIT_TIMEOUT_2ms bound to: 400000 - type: integer 
+	Parameter WAIT_TLOCK_MAX bound to: 20000 - type: integer 
+	Parameter WAIT_TIMEOUT_500us bound to: 100000 - type: integer 
+	Parameter WAIT_1us_CYCLES bound to: 200 - type: integer 
+	Parameter WAIT_1us bound to: 210 - type: integer 
+	Parameter WAIT_TIME_MAX bound to: 2000 - type: integer 
+	Parameter MAX_RETRIES bound to: 255 - type: integer 
+	Parameter MAX_WAIT_BYPASS bound to: 86784 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_sync_block' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_sync_block.v:63]
+	Parameter INITIALISE bound to: 2'b00 
+INFO: [Synth 8-638] synthesizing module 'FD' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:2773]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'FD' (15#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:2773]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_sync_block' (16#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_sync_block.v:63]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_TX_STARTUP_FSM' (17#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_tx_startup_fsm.v:76]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_RX_STARTUP_FSM' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_rx_startup_fsm.v:76]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+	Parameter EQ_MODE bound to: DFE - type: string 
+	Parameter STABLE_CLOCK_PERIOD bound to: 5 - type: integer 
+	Parameter RETRY_COUNTER_BITWIDTH bound to: 8 - type: integer 
+	Parameter TX_QPLL_USED bound to: FALSE - type: string 
+	Parameter RX_QPLL_USED bound to: FALSE - type: string 
+	Parameter PHASE_ALIGNMENT_MANUAL bound to: FALSE - type: string 
+	Parameter INIT bound to: 4'b0000 
+	Parameter ASSERT_ALL_RESETS bound to: 4'b0001 
+	Parameter WAIT_FOR_PLL_LOCK bound to: 4'b0010 
+	Parameter RELEASE_PLL_RESET bound to: 4'b0011 
+	Parameter VERIFY_RECCLK_STABLE bound to: 4'b0100 
+	Parameter RELEASE_MMCM_RESET bound to: 4'b0101 
+	Parameter WAIT_FOR_RXUSRCLK bound to: 4'b0110 
+	Parameter WAIT_RESET_DONE bound to: 4'b0111 
+	Parameter DO_PHASE_ALIGNMENT bound to: 4'b1000 
+	Parameter MONITOR_DATA_VALID bound to: 4'b1001 
+	Parameter FSM_DONE bound to: 4'b1010 
+	Parameter MMCM_LOCK_CNT_MAX bound to: 1024 - type: integer 
+	Parameter STARTUP_DELAY bound to: 500 - type: integer 
+	Parameter WAIT_CYCLES bound to: 100 - type: integer 
+	Parameter WAIT_MAX bound to: 110 - type: integer 
+	Parameter WAIT_TIMEOUT_2ms bound to: 400000 - type: integer 
+	Parameter WAIT_TLOCK_MAX bound to: 20000 - type: integer 
+	Parameter WAIT_TIMEOUT_500us bound to: 100000 - type: integer 
+	Parameter WAIT_TIMEOUT_1us bound to: 200 - type: integer 
+	Parameter WAIT_TIMEOUT_100us bound to: 20000 - type: integer 
+	Parameter WAIT_TIME_MAX bound to: 2000 - type: integer 
+	Parameter MAX_RETRIES bound to: 255 - type: integer 
+	Parameter MAX_WAIT_BYPASS bound to: 5000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_RX_STARTUP_FSM' (18#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_rx_startup_fsm.v:76]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_GTWIZARD_init' (19#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard_init.v:71]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_GTWIZARD' (20#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard.v:72]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_transceiver' (21#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_transceiver.v:63]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:606]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (22#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:606]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_block' (23#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:89]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_clocking' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_clocking.v:63]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS_GTE2' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:10380]
+	Parameter CLKCM_CFG bound to: TRUE - type: string 
+	Parameter CLKRCV_TRST bound to: TRUE - type: string 
+	Parameter CLKSWING_CFG bound to: 2'b11 
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS_GTE2' (24#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:10380]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:15990]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter CLKOUT1_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter CLKFBOUT_MULT_F bound to: 16.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 16.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 8.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (25#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:15990]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_clocking' (26#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_clocking.v:63]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_resets' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_resets.v:63]
+INFO: [Synth 8-4472] Detected and applied attribute ASYNC_REG = TRUE [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_resets.v:74]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_resets' (27#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_resets.v:63]
+INFO: [Synth 8-638] synthesizing module 'gig_ethernet_pcs_pma_0_gt_common' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_gt_common.v:7]
+	Parameter QPLL_FBDIV_TOP bound to: 16 - type: integer 
+	Parameter QPLL_FBDIV_IN bound to: 10'b0000100000 
+	Parameter QPLL_FBDIV_RATIO bound to: 1'b1 
+	Parameter WRAPPER_SIM_GTRESET_SPEEDUP bound to: FALSE - type: string 
+INFO: [Synth 8-638] synthesizing module 'GTXE2_COMMON' [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:8769]
+	Parameter SIM_RESET_SPEEDUP bound to: FALSE - type: string 
+	Parameter SIM_VERSION bound to: 4.0 - type: string 
+	Parameter IS_DRPCLK_INVERTED bound to: 1'b0 
+	Parameter IS_GTGREFCLK_INVERTED bound to: 1'b0 
+	Parameter IS_QPLLLOCKDETCLK_INVERTED bound to: 1'b0 
+	Parameter QPLL_COARSE_FREQ_OVRD_EN bound to: 1'b0 
+	Parameter QPLL_CP_MONITOR_EN bound to: 1'b0 
+	Parameter QPLL_DMONITOR_SEL bound to: 1'b0 
+	Parameter QPLL_FBDIV_MONITOR_EN bound to: 1'b0 
+	Parameter QPLL_FBDIV_RATIO bound to: 1'b1 
+	Parameter QPLL_LOCK_CFG bound to: 16'b0010000111101000 
+	Parameter QPLL_INIT_CFG bound to: 24'b000000000000000000000110 
+	Parameter QPLL_CFG bound to: 27'b000011010000000000111000001 
+	Parameter SIM_QPLLREFCLK_SEL bound to: 3'b001 
+	Parameter COMMON_CFG bound to: 0 - type: integer 
+	Parameter QPLL_CLKOUT_CFG bound to: 4'b0000 
+	Parameter QPLL_LPF bound to: 4'b1111 
+	Parameter QPLL_COARSE_FREQ_OVRD bound to: 6'b010000 
+	Parameter BIAS_CFG bound to: 64'b0000000000000000000001000000000000000000000000000001000000000000 
+	Parameter QPLL_CP bound to: 10'b0000011111 
+	Parameter QPLL_FBDIV bound to: 10'b0000100000 
+	Parameter QPLL_REFCLK_DIV bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GTXE2_COMMON' (28#1) [/ecad/tools/xilinx/Vivado/2014.2/scripts/rt/data/unisim_comp.v:8769]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_gt_common' (29#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_gt_common.v:7]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0_support' (30#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_support.v:64]
+INFO: [Synth 8-256] done synthesizing module 'gig_ethernet_pcs_pma_0' (31#1) [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.v:89]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 843.629 ; gain = 211.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_basex[8] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_basex[7] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_basex[6] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_basex[5] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_basex[4] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_basex[3] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_basex[2] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_basex[1] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_basex[0] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_sgmii[8] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_sgmii[7] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_sgmii[6] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_sgmii[5] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_sgmii[4] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_sgmii[3] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_sgmii[2] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_sgmii[1] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:link_timer_sgmii[0] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:gtx_clk to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[9] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[8] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[7] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[6] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[5] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[4] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[3] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[2] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[1] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group0[0] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[9] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[8] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[7] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[6] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[5] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[4] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[3] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[2] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[1] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:rx_code_group1[0] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:pma_rx_clk0 to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:pma_rx_clk1 to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:basex_or_sgmii to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_dclk to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_gnt to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_drdy to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[15] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[14] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[13] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[12] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[11] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[10] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[9] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[8] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[7] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[6] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[5] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[4] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[3] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[2] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[1] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:drp_do[0] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[47] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[46] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[45] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[44] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[43] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[42] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[41] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[40] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[39] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[38] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[37] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[36] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[35] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[34] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[33] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[32] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[31] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[30] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[29] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[28] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[27] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[26] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[25] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[24] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[23] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[22] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[21] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[20] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[19] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[18] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[17] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[16] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[15] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[14] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[13] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[12] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[11] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[10] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Synth 8-3295] tying undriven pin gig_ethernet_pcs_pma_0_core:systemtimer_s_field[9] to constant 0 [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_block.v:219]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Netlist 29-17] Analyzing 135 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/zynq/xc7z045/ClockRegion.xml
+Loading clock buffers from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/zynq/xc7z045/ClockBuffers.xml
+Loading clock placement rules from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/PinFunctions.xml...
+Loading package from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/zynq/xc7z045/ffg900/Package.xml
+Loading io standards from /ecad/tools/xilinx/Vivado/2014.2/data/./parts/xilinx/zynq/IOStandards.xml
+
+Processing XDC Constraints
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_ooc.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_ooc.xdc]
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.xdc]
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/gig_ethernet_pcs_pma_0_propImpl.xdc].
+Resolution: To avoid this message, exclude constraints listed in [.Xil/gig_ethernet_pcs_pma_0_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_board.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_board.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/gig_ethernet_pcs_pma_0_propImpl.xdc].
+Resolution: To avoid this message, exclude constraints listed in [.Xil/gig_ethernet_pcs_pma_0_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 134 instances were transformed.
+  FD => FDRE: 114 instances
+  FDP => FDPE: 18 instances
+  SRL16 => SRL16E: 2 instances
+
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1169.879 ; gain = 537.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1169.879 ; gain = 537.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1169.879 ; gain = 537.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'STATE_reg' in module 'SYNCHRONISE'
+INFO: [Synth 8-802] inferred FSM for state register 'STATE_reg' in module 'MDIO_INTERFACE'
+INFO: [Synth 8-802] inferred FSM for state register 'USE_ROCKET_IO.TX_RST_SM_reg' in module 'GPCS_PMA_GEN'
+INFO: [Synth 8-802] inferred FSM for state register 'USE_ROCKET_IO.RX_RST_SM_reg' in module 'GPCS_PMA_GEN'
+INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'gig_ethernet_pcs_pma_0_TX_STARTUP_FSM'
+INFO: [Synth 8-4471] merging register 'RXLPMLFHOLD_reg' into 'QPLL_RESET_reg' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_rx_startup_fsm.v:512]
+INFO: [Synth 8-4471] merging register 'RXLPMHFHOLD_reg' into 'QPLL_RESET_reg' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_rx_startup_fsm.v:513]
+INFO: [Synth 8-4471] merging register 'recclk_mon_count_reset_reg' into 'adapt_count_reset_reg' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_rx_startup_fsm.v:508]
+INFO: [Synth 8-4471] merging register 'RXDFELFHOLD_reg' into 'RXDFEAGCHOLD_reg' [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/transceiver/gig_ethernet_pcs_pma_0_rx_startup_fsm.v:511]
+INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'gig_ethernet_pcs_pma_0_RX_STARTUP_FSM'
+INFO: [Synth 8-3354] encoded FSM with state register 'STATE_reg' using encoding 'one-hot' in module 'SYNCHRONISE'
+INFO: [Synth 8-3354] encoded FSM with state register 'STATE_reg' using encoding 'one-hot' in module 'MDIO_INTERFACE'
+INFO: [Synth 8-3354] encoded FSM with state register 'USE_ROCKET_IO.RX_RST_SM_reg' using encoding 'one-hot' in module 'GPCS_PMA_GEN'
+INFO: [Synth 8-3354] encoded FSM with state register 'USE_ROCKET_IO.TX_RST_SM_reg' using encoding 'one-hot' in module 'GPCS_PMA_GEN'
+INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encoding 'one-hot' in module 'gig_ethernet_pcs_pma_0_TX_STARTUP_FSM'
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'one-hot' in module 'gig_ethernet_pcs_pma_0_RX_STARTUP_FSM'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 14    
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 18    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 26    
+	                1 Bit    Registers := 263   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	  15 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 17    
+	   5 Input     16 Bit        Muxes := 2     
+	   2 Input     15 Bit        Muxes := 2     
+	  31 Input     14 Bit        Muxes := 1     
+	  17 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	  16 Input     12 Bit        Muxes := 1     
+	  14 Input     11 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 21    
+	   4 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 5     
+	  16 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 11    
+	   2 Input      2 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 15    
+	   5 Input      1 Bit        Muxes := 1     
+	  15 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 19    
+	   2 Input      1 Bit        Muxes := 131   
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module gig_ethernet_pcs_pma_0 
+Detailed RTL Component Info : 
+Module TX__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 11    
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 17    
+Module sync_block__parameterized0 
+Detailed RTL Component Info : 
+Module SYNCHRONISE 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	  31 Input     14 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module RX__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 61    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 12    
+Module MDIO_INTERFACE 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	  16 Input     12 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+Module MANAGEMENT__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 26    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 12    
+	   2 Input     15 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 15    
+Module AUTO_NEG__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               16 Bit    Registers := 5     
+	                9 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 57    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   5 Input     16 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 10    
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 35    
+	   3 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 1     
+Module GPCS_PMA_GEN 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	  15 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
+	  16 Input      4 Bit        Muxes := 2     
+	  15 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+Module gig_ethernet_pcs_pma_v14_2 
+Detailed RTL Component Info : 
+Module gig_ethernet_pcs_pma_0_reset_sync 
+Detailed RTL Component Info : 
+Module gig_ethernet_pcs_pma_0_GTWIZARD_GT 
+Detailed RTL Component Info : 
+Module gig_ethernet_pcs_pma_0_GTWIZARD_multi_gt 
+Detailed RTL Component Info : 
+Module gig_ethernet_pcs_pma_0_sync_block 
+Detailed RTL Component Info : 
+Module gig_ethernet_pcs_pma_0_TX_STARTUP_FSM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	  14 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 15    
+	   2 Input      1 Bit        Muxes := 12    
+Module gig_ethernet_pcs_pma_0_RX_STARTUP_FSM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 25    
++---Muxes : 
+	  17 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 19    
+	   2 Input      1 Bit        Muxes := 19    
+Module gig_ethernet_pcs_pma_0_GTWIZARD_init 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module gig_ethernet_pcs_pma_0_GTWIZARD 
+Detailed RTL Component Info : 
+Module gig_ethernet_pcs_pma_0_transceiver 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 18    
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module gig_ethernet_pcs_pma_0_block 
+Detailed RTL Component Info : 
+Module gig_ethernet_pcs_pma_0_clocking 
+Detailed RTL Component Info : 
+Module gig_ethernet_pcs_pma_0_resets 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module gig_ethernet_pcs_pma_0_gt_common 
+Detailed RTL Component Info : 
+Module gig_ethernet_pcs_pma_0_support 
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1169.879 ; gain = 537.258
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1169.879 ; gain = 537.258
+---------------------------------------------------------------------------------
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1169.879 ; gain = 537.258
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/pcs_pma_block_i/transceiver_inst/rxrundisp_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_rxresetfsm_i/recclk_mon_restart_count_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_rxresetfsm_i/recclk_mon_restart_count_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_0/\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_txresetfsm_i/FSM_onehot_tx_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_1/\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_rxresetfsm_i/FSM_onehot_rx_state_reg[0] )
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_txresetfsm_i/FSM_onehot_tx_state_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_rxresetfsm_i/FSM_onehot_rx_state_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_rxresetfsm_i/recclk_mon_restart_count_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_rxresetfsm_i/recclk_mon_restart_count_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_rxresetfsm_i/time_out_100us_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gt0_rxresetfsm_i/pll_reset_asserted_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/rxrundisp_double_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/rxrundisp_double_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/rxrundisp_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/rxrundisp_reg_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/rxrundisp_reg_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/rxbufstatus_reg_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/rxbufstatus_reg_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\inst/pcs_pma_block_i/transceiver_inst/txbufstatus_reg_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_0.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/RECEIVER/RX_INVALID_REG2_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/MR_LP_ADV_ABILITY_INT_reg[12] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/MR_LP_ADV_ABILITY_INT_reg[11] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/MR_LP_ADV_ABILITY_INT_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[14] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[10] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[9] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[6] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[4] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[3] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[2] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/RX_CONFIG_SNAPSHOT_reg[14] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/USE_ROCKET_IO.NO_1588.RXBUFSTATUS_INT_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[14] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[11] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/RECEIVER/RX_INVALID_REG1_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1169.902 ; gain = 537.281
+---------------------------------------------------------------------------------
+Finished Parallel Area Opt  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1169.902 ; gain = 537.281
+Finished Parallel Section  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1169.902 ; gain = 537.281
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1219.895 ; gain = 587.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1221.895 ; gain = 589.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/MR_NP_LOADED_SET_REG1_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/MR_NP_LOADED_SET_REG2_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/MR_NP_LOADED_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.NP_LOADED_SET_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/SYNCHRONISATION/FSM_onehot_STATE_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/MDIO_INTERFACE_1/FSM_onehot_STATE_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/FSM_onehot_USE_ROCKET_IO.RX_RST_SM_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/FSM_onehot_USE_ROCKET_IO.TX_RST_SM_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/TX_CONFIG_REG_INT_reg[10] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/TX_CONFIG_REG_INT_reg[9] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/TX_CONFIG_REG_INT_reg[6] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/TX_CONFIG_REG_INT_reg[4] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/TX_CONFIG_REG_INT_reg[3] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/TX_CONFIG_REG_INT_reg[2] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/TX_CONFIG_REG_INT_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/SGMII_PHY_STATUS_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/SGMII_SPEED_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/SGMII_SPEED_reg[0] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_ADV_REG_WITH_AN.AN_ADV_REG_reg[11] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/BASE_OR_NP_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/MR_PAGE_RX_CLEAR_REG1_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/MR_PAGE_RX_CLEAR_REG2_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[15] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[12] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[10] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[9] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[8] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[7] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[6] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[5] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[4] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[3] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[2] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/AN_NP_TX_REG_WITH_AN.AN_NP_TX_REG_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_AUTO_NEG.AUTO_NEGOTIATION/MR_PAGE_RX_SET_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/HAS_MANAGEMENT.MDIO/CLEAR_PAGE_RECEIVED_reg ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/TRANSMITTER/TX_CONFIG_reg[10] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/TRANSMITTER/TX_CONFIG_reg[9] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/TRANSMITTER/TX_CONFIG_reg[6] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/TRANSMITTER/TX_CONFIG_reg[4] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/TRANSMITTER/TX_CONFIG_reg[3] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/TRANSMITTER/TX_CONFIG_reg[2] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+INFO: [Synth 8-3332] Sequential element (\gpcs_pma_inst/TRANSMITTER/TX_CONFIG_reg[1] ) is unused and will be removed from module gig_ethernet_pcs_pma_v14_2.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1238.910 ; gain = 606.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-4617] Design gig_ethernet_pcs_pma_0 has 1 max_fanout violations that cannot be satisfied.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1238.910 ; gain = 606.289
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1238.910 ; gain = 606.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1238.910 ; gain = 606.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++---------------------------+-------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                | RTL Name                                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------------+-------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|gig_ethernet_pcs_pma_v14_2 | gpcs_pma_inst/RECEIVER/RXDATA_REG5_reg[7] | 5      | 8     | NO           | NO                 | YES               | 8      | 0       | 
++---------------------------+-------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |BUFG          |     4|
+|2     |CARRY4        |    48|
+|3     |GTXE2_CHANNEL |     1|
+|4     |GTXE2_COMMON  |     1|
+|5     |IBUFDS_GTE2   |     1|
+|6     |LUT1          |   175|
+|7     |LUT2          |   101|
+|8     |LUT3          |   174|
+|9     |LUT4          |   129|
+|10    |LUT5          |   156|
+|11    |LUT6          |   342|
+|12    |MMCME2_ADV    |     1|
+|13    |MUXCY_L       |    11|
+|14    |SRL16         |     2|
+|15    |SRL16E        |     8|
+|16    |XORCY         |    12|
+|17    |FD            |   114|
+|18    |FDCE          |    18|
+|19    |FDP           |    18|
+|20    |FDPE          |     6|
+|21    |FDRE          |   798|
+|22    |FDSE          |    54|
++------+--------------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+-----------------------------------------+------+
+|      |Instance                                   |Module                                   |Cells |
++------+-------------------------------------------+-----------------------------------------+------+
+|1     |top                                        |                                         |  2174|
+|2     |  inst                                     |gig_ethernet_pcs_pma_0_support           |  2174|
+|3     |    core_clocking_i                        |gig_ethernet_pcs_pma_0_clocking          |     6|
+|4     |    core_gt_common_i                       |gig_ethernet_pcs_pma_0_gt_common         |     1|
+|5     |    core_resets_i                          |gig_ethernet_pcs_pma_0_resets            |     4|
+|6     |    pcs_pma_block_i                        |gig_ethernet_pcs_pma_0_block             |  2163|
+|7     |      gig_ethernet_pcs_pma_0_core          |gig_ethernet_pcs_pma_v14_2               |  1165|
+|8     |        gpcs_pma_inst                      |GPCS_PMA_GEN                             |  1165|
+|9     |          \HAS_AUTO_NEG.AUTO_NEGOTIATION   |AUTO_NEG__parameterized0                 |   296|
+|10    |          \HAS_MANAGEMENT.MDIO             |MANAGEMENT__parameterized0               |   252|
+|11    |            MDIO_INTERFACE_1               |MDIO_INTERFACE                           |   182|
+|12    |            SYNC_MDC                       |sync_block__parameterized0_0             |     7|
+|13    |            SYNC_MDIO_IN                   |sync_block__parameterized0_1             |     6|
+|14    |          RECEIVER                         |RX__parameterized0                       |   205|
+|15    |          SYNCHRONISATION                  |SYNCHRONISE                              |    90|
+|16    |          SYNC_SIGNAL_DETECT               |sync_block__parameterized0               |     7|
+|17    |          TRANSMITTER                      |TX__parameterized0                       |   143|
+|18    |      sync_block_reset_done                |gig_ethernet_pcs_pma_0_sync_block        |     6|
+|19    |      transceiver_inst                     |gig_ethernet_pcs_pma_0_transceiver       |   991|
+|20    |        reclock_encommaalign               |gig_ethernet_pcs_pma_0_reset_sync__3     |     6|
+|21    |        reclock_txreset                    |gig_ethernet_pcs_pma_0_reset_sync__4     |     6|
+|22    |        reclock_rxreset                    |gig_ethernet_pcs_pma_0_reset_sync        |     6|
+|23    |        sync_block_data_valid              |gig_ethernet_pcs_pma_0_sync_block__30    |     6|
+|24    |        gtwizard_inst                      |gig_ethernet_pcs_pma_0_GTWIZARD          |   825|
+|25    |          inst                             |gig_ethernet_pcs_pma_0_GTWIZARD_init     |   825|
+|26    |            sync_block_gtrxreset           |gig_ethernet_pcs_pma_0_sync_block__29    |     6|
+|27    |            gt0_rxresetfsm_i               |gig_ethernet_pcs_pma_0_RX_STARTUP_FSM    |   399|
+|28    |              sync_run_phase_alignment_int |gig_ethernet_pcs_pma_0_sync_block__22    |     6|
+|29    |              sync_rx_fsm_reset_done_int   |gig_ethernet_pcs_pma_0_sync_block__23    |     6|
+|30    |              sync_time_out_wait_bypass    |gig_ethernet_pcs_pma_0_sync_block__24    |     6|
+|31    |              sync_RXRESETDONE             |gig_ethernet_pcs_pma_0_sync_block__25    |     6|
+|32    |              sync_mmcm_lock_reclocked     |gig_ethernet_pcs_pma_0_sync_block__26    |     6|
+|33    |              sync_data_valid              |gig_ethernet_pcs_pma_0_sync_block__27    |     6|
+|34    |              sync_cplllock                |gig_ethernet_pcs_pma_0_sync_block__28    |     6|
+|35    |            gt0_txresetfsm_i               |gig_ethernet_pcs_pma_0_TX_STARTUP_FSM    |   308|
+|36    |              sync_run_phase_alignment_int |gig_ethernet_pcs_pma_0_sync_block__16    |     6|
+|37    |              sync_tx_fsm_reset_done_int   |gig_ethernet_pcs_pma_0_sync_block__17    |     6|
+|38    |              sync_time_out_wait_bypass    |gig_ethernet_pcs_pma_0_sync_block__18    |     6|
+|39    |              sync_TXRESETDONE             |gig_ethernet_pcs_pma_0_sync_block__19    |     6|
+|40    |              sync_mmcm_lock_reclocked     |gig_ethernet_pcs_pma_0_sync_block__20    |     6|
+|41    |              sync_cplllock                |gig_ethernet_pcs_pma_0_sync_block__21    |     6|
+|42    |            gtwizard_i                     |gig_ethernet_pcs_pma_0_GTWIZARD_multi_gt |     1|
+|43    |              gt0_GTWIZARD_i               |gig_ethernet_pcs_pma_0_GTWIZARD_GT       |     1|
++------+-------------------------------------------+-----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1238.910 ; gain = 606.289
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1238.910 ; gain = 606.289
+INFO: [Netlist 29-17] Analyzing 206 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_ooc.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0_ooc.xdc]
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/synth/gig_ethernet_pcs_pma_0.xdc]
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_board.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_board.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 137 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 3 instances
+  FD => FDRE: 114 instances
+  FDP => FDPE: 18 instances
+  SRL16 => SRL16E: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+310 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1253.910 ; gain = 503.164
+# rename_ref -prefix_all gig_ethernet_pcs_pma_0_
+INFO: [Coretcl 2-1174] Renamed 42 cell refs.
+# write_checkpoint -noxdef gig_ethernet_pcs_pma_0.dcp
+# report_utilization -file gig_ethernet_pcs_pma_0_utilization_synth.rpt -pb gig_ethernet_pcs_pma_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1253.914 ; gain = 0.000
+# if { [catch {
+#   file copy -force /scratch/skarandikar/test_ps_sfp/project_1.runs/gig_ethernet_pcs_pma_0_synth_1/gig_ethernet_pcs_pma_0.dcp /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.dcp
+#   write_verilog -force -mode synth_stub /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_stub.v
+#   write_vhdl -force -mode synth_stub /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_stub.vhdl
+#   write_verilog -force -mode funcsim /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_funcsim.v
+#   write_vhdl -force -mode funcsim /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0_funcsim.vhdl
+# } _RESULT ] } { 
+#   send_msg_id runtcl-3 error "Unable to successfully create or copy supporting IP files."
+#   return -code error
+# }
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 13 15:19:03 2014...

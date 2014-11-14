@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+  [bootloader]/scratch/skarandikar/test_ps_sfp/project_1.sdk/FSBL/Debug/FSBL.elf
+  /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+  /scratch/skarandikar/fpga-zynq-sfp/zc706/soft_build/u-boot.elf
+}

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2014.2 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright (c) 2001-2013 Xilinx Inc, All rights reserved -->
+
+<Project Version="7" Minor="1" Path="/scratch/skarandikar/test_ps_sfp/project_1.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="35e20d371733497f901c0e2b025517af"/>
+    <Option Name="Part" Val="xc7z045ffg900-2"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="BoardPart" Val="xilinx.com:zc706:part0:1.0"/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.v"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hdl/design_1_wrapper.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v"/>
+          <Attr Name="ImportTime" Val="1415920515"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="design_1_wrapper"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/new/base.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="design_1_wrapper"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="gig_ethernet_pcs_pma_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gig_ethernet_pcs_pma_0">
+      <File Path="$PSRCDIR/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/TBI/encode_8b10b.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/TBI/rx_elastic_buffer.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen_pack.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/TBI/decode_8b10b.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/synchronise/synchronise.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0_resets.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/gpcs_pma_gen.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/TBI/rx_elastic_buffer_sgmii.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/synchronise/synchronise_pack.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/TBI/tbi.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_0.xml"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_0_board.xdc"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0.xdc"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/transceiver/gig_ethernet_pcs_pma_0_transceiver.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0_block.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0_sync_block.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard_gt.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard_multi_gt.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0_reset_sync.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/transceiver/gig_ethernet_pcs_pma_0_rx_startup_fsm.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/transceiver/gig_ethernet_pcs_pma_0_tx_startup_fsm.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard_init.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/transceiver/gig_ethernet_pcs_pma_0_gtwizard.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0_gt_common.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0_support.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="synth/gig_ethernet_pcs_pma_0_clocking.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/gig_ethernet_pcs_pma_v14_2.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/auto_neg/auto_neg.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/auto_neg/auto_neg_pack.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/management/management.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_0.dcp"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_0_funcsim.v"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_0_funcsim.vhdl"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="doc/gig_ethernet_pcs_pma_v14_2_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_0.veo"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gtwizard_basex_v7_xci.txt"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/ptp/ptp_pack.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block_pack.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/sync_block/sync_block.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/ptp/rx_elastic_buffer_1588_cor_tmr.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/ptp/timer_rx_latency_correct.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/ptp/timer_rx_latency_correct_cf.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/tx/tx_pack.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/ptp/rx_elastic_buffer_1588.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/tx/tx.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/rx/rx_pack.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/rx/rx.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/TBI/tbi_pack.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/management/management_pack.vhd"/>
+        <CompFileExtendedInfo CompFileName="gig_ethernet_pcs_pma_0.xci" FileRelPathName="gig_ethernet_pcs_pma_v14_2/hdl/management/mdio_interface.vhd"/>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="gig_ethernet_pcs_pma_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ila_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_0">
+      <File Path="$PSRCDIR/sources_1/ip/ila_0/ila_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_ver_inc.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_all_typeA.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_lib_function.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_allx_typeA.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_all_typeA_slice.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_bindec.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_min_area_pkg.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_getinit_pkg.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_v8_1_pkg.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_v8_1_defaults.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_v8_1_synth_comp.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_allx_typeA_nodelay.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="sim/ila_0.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0.veo"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="doc/ila_v4_0_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0_funcsim.vhdl"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0_funcsim.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_startup.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_xsdb_slave_lib_v3_0/hdl/verilog/labtools_xsdb_slave_lib_v3_0_chipscope_icon2xsdb_mstrbr_ver_inc.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_match_nodelay.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_bufr.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_xsdb_slave_lib_v3_0/hdl/verilog/labtools_xsdb_slave_lib_v3_0_cs_ver_inc.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_bscan.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_cfglut8.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_async_transfer.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_cfglut4.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_rising_edge_detection.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_cfglut5.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_generic_mux.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_match.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_xsdb_slave_lib_v3_0/hdl/verilog/labtools_xsdb_slave_lib_v3_0_xsdb_register_p2s.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_generic_memory_read.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_async_edge_transfer.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_xsdb_slave_lib_v3_0/hdl/verilog/labtools_xsdb_slave_lib_v3_0_xsdb_register_stat.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_xsdb_slave_lib_v3_0/hdl/verilog/labtools_xsdb_slave_lib_v3_0_xsdb_register_stream.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_xsdb_slave_lib_v3_0/hdl/verilog/labtools_xsdb_slave_lib_v3_0_xsdb_register_ctl.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0.dcp"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_cfglut7.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_xsdb_slave_lib_v3_0/hdl/verilog/labtools_xsdb_slave_lib_v3_0_chipscope_xsdb_slave.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_general_components_lib_v2_0/hdl/verilog/cs_cfglut6.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_xsdb_slave_lib_v3_0/hdl/verilog/labtools_xsdb_slave_lib_v3_0_xsdb_interface_buffers.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="labtools_xsdb_slave_lib_v3_0/hdl/verilog/labtools_xsdb_slave_lib_v3_0_xsdb_register.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_axi_regs_fwd.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_axi_write_wrapper.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_axi_write_fsm.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_cap_window_counter.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_cap_sample_counter.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_cap_ctrl_legacy.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_v8_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_v8_1_synth.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_top.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_cap_addrgen.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_ver_inc.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_core.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_reset_ctrl.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_register.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_lib_function.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_trace_memory.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_trig_match.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_adv_trigger_sequencer.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_counter.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_counter_match.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_fsm_memory_read.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila_trigger.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v4_0/hdl/verilog/ila_v4_0_ila.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="constraints/ila.xdc"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="synth/ila_0.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0.xml"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_axi_read_wrapper.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_axi_read_fsm.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_output_block.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_input_block.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_ecc_decoder.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_ecc_encoder.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_prim_width.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_generic_cstr.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_mux.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_prim_wrapper.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_1/blk_mem_gen_prim_wrapper_init.vhd"/>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="ila_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Runs Version="1" Minor="9">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z045ffg900-2" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="gig_ethernet_pcs_pma_0_synth_1" Type="Ft3:Synth" SrcSet="gig_ethernet_pcs_pma_0" Part="xc7z045ffg900-2" ConstrsSet="gig_ethernet_pcs_pma_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/gig_ethernet_pcs_pma_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="ila_0_synth_1" Type="Ft3:Synth" SrcSet="ila_0" Part="xc7z045ffg900-2" ConstrsSet="ila_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ila_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z045ffg900-2" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="gig_ethernet_pcs_pma_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z045ffg900-2" ConstrsSet="gig_ethernet_pcs_pma_0" Description="Vivado Implementation Defaults" SynthRun="gig_ethernet_pcs_pma_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="ila_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z045ffg900-2" ConstrsSet="ila_0" Description="Vivado Implementation Defaults" SynthRun="ila_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+  </Runs>
+</Project>

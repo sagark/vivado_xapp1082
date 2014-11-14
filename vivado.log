@@ -1,0 +1,294 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:12:34 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu Nov 13 15:08:54 2014
+# Process ID: 98974
+# Log file: /scratch/skarandikar/test_ps_sfp/vivado.log
+# Journal file: /scratch/skarandikar/test_ps_sfp/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 . -part xc7z045ffg900-2
+set_property board_part xilinx.com:zc706:part0:1.0 [current_project]
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ecad/tools/xilinx/Vivado/2014.2/data/ip'.
+create_bd_design "design_1"
+Wrote  : </scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.4 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4879.887 ; gain = 6.000
+INFO: [PS7-1] Applying Custom Preset /scratch/skarandikar/ps7_system_prj.xml...
+startgroup
+set_property -dict [list CONFIG.PCW_IMPORT_BOARD_PRESET {/scratch/skarandikar/ps7_system_prj.xml}] [get_bd_cells processing_system7_0]
+INFO: [PS7-1] Applying Custom Preset /scratch/skarandikar/ps7_system_prj.xml...
+endgroup
+startgroup
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {0} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {0} CONFIG.PCW_QSPI_GRP_IO1_ENABLE {0}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gmii_rtl:1.0 GMII_ETHERNET_1
+connect_bd_intf_net [get_bd_intf_pins processing_system7_0/GMII_ETHERNET_1] [get_bd_intf_ports GMII_ETHERNET_1]
+endgroup
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:mdio_rtl:1.0 MDIO_ETHERNET_1
+connect_bd_intf_net [get_bd_intf_pins processing_system7_0/MDIO_ETHERNET_1] [get_bd_intf_ports MDIO_ETHERNET_1]
+endgroup
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ptp_rtl:1.0 PTP_ETHERNET_1
+connect_bd_intf_net [get_bd_intf_pins processing_system7_0/PTP_ETHERNET_1] [get_bd_intf_ports PTP_ETHERNET_1]
+endgroup
+startgroup
+create_bd_port -dir O -type clk FCLK_CLK0
+connect_bd_net [get_bd_pins /processing_system7_0/FCLK_CLK0] [get_bd_ports FCLK_CLK0]
+endgroup
+startgroup
+create_bd_port -dir O -type rst FCLK_RESET0_N
+connect_bd_net [get_bd_pins /processing_system7_0/FCLK_RESET0_N] [get_bd_ports FCLK_RESET0_N]
+endgroup
+startgroup
+create_bd_port -dir I -type intr ENET1_EXT_INTIN
+connect_bd_net [get_bd_pins /processing_system7_0/ENET1_EXT_INTIN] [get_bd_ports ENET1_EXT_INTIN]
+endgroup
+make_wrapper -files [get_files /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+Exporting to file /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Verilog Output written to : design_1.v
+Verilog Output written to : design_1_wrapper.v
+Wrote  : </scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+import_files -force -norecurse /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+create_ip -name gig_ethernet_pcs_pma -vendor xilinx.com -library ip -module_name gig_ethernet_pcs_pma_0
+set_property -dict [list CONFIG.USE_BOARD_FLOW {true} CONFIG.ETHERNET_BOARD_INTERFACE {sfp} CONFIG.DIFFCLK_BOARD_INTERFACE {jit_att_mgt_clk} CONFIG.SupportLevel {Include_Shared_Logic_in_Core} CONFIG.C_PHYADDR {6}] [get_ips gig_ethernet_pcs_pma_0]
+WARNING: [IP_Flow 19-3374] Attempt to set value 'jit_att_mgt_clk' on disabled parameter 'DIFFCLK_BOARD_INTERFACE' is ignored for 'gig_ethernet_pcs_pma_0'
+generate_target {instantiation_template} [get_files /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'gig_ethernet_pcs_pma_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci]
+INFO: [IP_Flow 19-1706] Not generating 'Instantiation Template' target for IP 'gig_ethernet_pcs_pma_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gig_ethernet_pcs_pma_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'gig_ethernet_pcs_pma_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'gig_ethernet_pcs_pma_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'gig_ethernet_pcs_pma_0'...
+generate_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 5022.449 ; gain = 0.000
+create_ip_run [get_files -of_objects [get_fileset sources_1] /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci]
+launch_run  gig_ethernet_pcs_pma_0_synth_1
+[Thu Nov 13 15:18:25 2014] Launched gig_ethernet_pcs_pma_0_synth_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/gig_ethernet_pcs_pma_0_synth_1/runme.log
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 20-342] File / dir doesn't exist, skipping: /scratch/skarandikar/test_ps_sfp/project_1.srcs/constrs_1/new/base.xdc
+close [ open /scratch/skarandikar/test_ps_sfp/project_1.srcs/constrs_1/new/base.xdc w ]
+add_files -fileset constrs_1 /scratch/skarandikar/test_ps_sfp/project_1.srcs/constrs_1/new/base.xdc
+open_project /scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/fifo/tri_mode_ethernet_mac_0_bram_tdp.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/common/tri_mode_ethernet_mac_0_sync_block.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/fifo/tri_mode_ethernet_mac_0_tx_client_fifo.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/fifo/tri_mode_ethernet_mac_0_rx_client_fifo.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/support/tri_mode_ethernet_mac_0_support.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/pat_gen/tri_mode_ethernet_mac_0_axi_pipe.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/pat_gen/tri_mode_ethernet_mac_0_axi_pat_gen.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/pat_gen/tri_mode_ethernet_mac_0_axi_pat_check.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/pat_gen/tri_mode_ethernet_mac_0_axi_mux.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/pat_gen/tri_mode_ethernet_mac_0_address_swap.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/fifo/tri_mode_ethernet_mac_0_ten_100_1g_eth_fifo.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/common/tri_mode_ethernet_mac_0_reset_sync.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/tri_mode_ethernet_mac_0_fifo_block.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/tri_mode_ethernet_mac_0_example_design_resets.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/tri_mode_ethernet_mac_0_example_design_clocks.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/pat_gen/tri_mode_ethernet_mac_0_basic_pat_gen.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/axi_lite_sm/tri_mode_ethernet_mac_0_axi_lite_sm.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/example_design/tri_mode_ethernet_mac_0_example_design.v]
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/sampleFINAL/tri_mode_ethernet_mac_0_example/tri_mode_ethernet_mac_0_example.srcs/sources_1/imports/hdl/system_wrapper.v]
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ecad/tools/xilinx/Vivado/2014.2/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 5055.129 ; gain = 26.723
+current_project project_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+Exporting to file /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Verilog Output written to : design_1.v
+Verilog Output written to : design_1_wrapper.v
+Wrote  : </scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_processing_system7_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v]
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+[Thu Nov 13 16:11:09 2014] Launched synth_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/runme.log
+[Thu Nov 13 16:11:09 2014] Launched impl_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 5066.027 ; gain = 2.855
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+Loading clock regions from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/zynq/xc7z045/ClockRegion.xml
+Loading clock buffers from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/zynq/xc7z045/ClockBuffers.xml
+Loading clock placement rules from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/PinFunctions.xml...
+Loading package from /ecad/tools/xilinx/Vivado/2014.2/data/parts/xilinx/zynq/zynq/xc7z045/ffg900/Package.xml
+Loading io standards from /ecad/tools/xilinx/Vivado/2014.2/data/./parts/xilinx/zynq/IOStandards.xml
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper_early.xdc]
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper.xdc]
+Reading XDEF placement.
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.11 . Memory (MB): peak = 5264.559 ; gain = 0.000
+Restoring placement.
+Restored 562 out of 562 XDEF sites from archive | CPU: 0.370000 secs | Memory: 3.357712 MB |
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 5490.398 ; gain = 424.371
+file mkdir /scratch/skarandikar/test_ps_sfp/project_1.sdk
+file copy -force /scratch/skarandikar/test_ps_sfp/project_1.runs/impl_1/design_1_wrapper.sysdef /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+create_ip -name ila -vendor xilinx.com -library ip -module_name ila_0
+set_property -dict [list CONFIG.C_PROBE2_WIDTH {8} CONFIG.C_PROBE1_WIDTH {8} CONFIG.C_PROBE0_WIDTH {16} CONFIG.C_DATA_DEPTH {131072} CONFIG.C_NUM_OF_PROBES {20}] [get_ips ila_0]
+generate_target {instantiation_template} [get_files /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1706] Not generating 'Instantiation Template' target for IP 'ila_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+create_ip_run [get_files -of_objects [get_fileset sources_1] /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci]
+launch_run  ila_0_synth_1
+[Thu Nov 13 19:56:39 2014] Launched ila_0_synth_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/ila_0_synth_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v]
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+[Thu Nov 13 20:07:14 2014] Launched synth_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/runme.log
+[Thu Nov 13 20:07:14 2014] Launched impl_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/impl_1/runme.log
+reset_run impl_1 -noclean_dir 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v]
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+[Thu Nov 13 20:11:35 2014] Launched synth_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/runme.log
+[Thu Nov 13 20:11:36 2014] Launched impl_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 463 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper_early.xdc]
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/scratch/skarandikar/test_ps_sfp/project_1.cache/30cf66ef/labtools_xsdb_master_lib.xdc:13]
+INFO: [Timing 38-2] Deriving generated clocks [/scratch/skarandikar/test_ps_sfp/project_1.cache/30cf66ef/labtools_xsdb_master_lib.xdc:13]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 5941.227 ; gain = 52.340
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper.xdc]
+Reading XDEF placement.
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.52 . Memory (MB): peak = 5941.227 ; gain = 0.000
+Restoring placement.
+Restored 2023 out of 2023 XDEF sites from archive | CPU: 1.640000 secs | Memory: 16.873871 MB |
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+refresh_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:31 . Memory (MB): peak = 6083.734 ; gain = 205.852
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/imports/hdl/design_1_wrapper.v]
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+[Thu Nov 13 20:26:10 2014] Launched synth_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/synth_1/runme.log
+[Thu Nov 13 20:26:10 2014] Launched impl_1...
+Run output will be captured here: /scratch/skarandikar/test_ps_sfp/project_1.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 463 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper_early.xdc]
+Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/scratch/skarandikar/test_ps_sfp/project_1.cache/30cf66ef/labtools_xsdb_master_lib.xdc:13]
+INFO: [Timing 38-2] Deriving generated clocks [/scratch/skarandikar/test_ps_sfp/project_1.cache/30cf66ef/labtools_xsdb_master_lib.xdc:13]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 6094.527 ; gain = 0.000
+Finished Parsing XDC File [/scratch/skarandikar/test_ps_sfp/.Xil/Vivado-98974-a8/dcp/design_1_wrapper.xdc]
+Reading XDEF placement.
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.50 . Memory (MB): peak = 6094.527 ; gain = 0.000
+Restoring placement.
+Restored 2062 out of 2062 XDEF sites from archive | CPU: 1.590000 secs | Memory: 16.947418 MB |
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/gig_ethernet_pcs_pma_0/gig_ethernet_pcs_pma_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/ip/ila_0/ila_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
+refresh_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:31 . Memory (MB): peak = 6114.328 ; gain = 19.801
+file copy -force /scratch/skarandikar/test_ps_sfp/project_1.runs/impl_1/design_1_wrapper.sysdef /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {/scratch/skarandikar/test_ps_sfp/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+launch_sdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /scratch/skarandikar/test_ps_sfp/project_1.sdk -hwspec /scratch/skarandikar/test_ps_sfp/project_1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_project
+close_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 6125.883 ; gain = 0.000
